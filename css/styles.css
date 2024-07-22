@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #fcf5e9;
+
+  --container-normal: 1100px;
+  --container-narrow: 900px;
+  --container-wide: 1400px;
+  --dark-color: #333;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Utility Classes */
+.bg-primary {
+  background: var(--primary-color);
+}
+
+#dark-color {
+  color: var(--dark-color);
+}
+
+.bg-dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.bg-dark .bg-primary {
+  padding: 0 0.3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid #333;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Container */
+.container {
+  max-width: var(--container-normal);
+  margin: 0px auto;
+  padding: 0 1.5rem;
+}
+
+.conatiner-lg {
+  max-width: var(--container-wide);
+}
+
+.container-sm {
+  max-width: var(--container-narrow);
+}
+
+.section-heading {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header {
+  margin: 1.5rem auto;
+}
+
+/* Header */
+.header .logo {
+  width: 130px;
+}
+
+.header .header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .main-menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header .main-menu a {
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    background-color: var(--primary-color);
+  }
+}
+
+.current {
+  background-color: var(--primary-color);
+  font-weight: 600;
+}
+
+.hero {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .container h2 {
+  font-size: 3rem;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-item {
+  width: calc(33.33% - 20px);
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  border-radius: 10px;
+}
+
+.gallery-item img:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+  border: 1px solid #aaa;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .logo {
+  width: 130px;
+  /* height: 35px; */
+}
+
+.footer h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact {
+  text-align: center;
+}
+
+.social-media {
+  text-align: center;
+
+  a {
+    margin: 0px 5px;
+  }
+}
+
+/* Services */
+.services {
+  padding: 3rem 0 4rem;
+}
+
+.services .services-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.service-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Team */
+.team {
+  padding: 3rem 0 4rem;
+}
+
+.team .team-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.team-item img {
+  border-radius: 10px;
+}
+
+/* Contact */
+.contact-form {
+  padding: 3rem 0 4rem;
+}
+
+.contact-form p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin: 2rem 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  border-bottom: 1px #333 solid;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding-bottom: 1rem;
+}
+
+.contact-form textarea {
+  height: 200px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 0;
+}
+
+.contact-form button {
+  width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header .header-flex,
+  .footer .footer-flex,
+  .services .services-flex,
+  .team .team-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero .container h2 {
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+
+  .gallery-item {
+    width: calc(50% - 20px);
+  }
+}
